@@ -1,0 +1,41 @@
+{% extends 'shop/base.html' %}
+{% block title %} {{prod.product_name}}view{% endblock %}
+{% block body %}
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <img src="/media/{{prod.image}}" alt="pic" width="233px" height="385px">
+            </div>
+            <div class="row divpr" id="divprpr{{ prod.id }}">
+                <button class="btn btn-primary mx-4">Buy Now</button>
+                <!-- <button class="btn btn-primary">Add To Cart</button> -->
+                <!-- <span id="divpr{{ i.product_id }}" class="divpr">
+                    <button id="pr{{i.product_id}}" class="btn btn-primary cart">Add to cart</button>
+                </span> -->
+
+                <div id="divprpr{{ prod.id }}" class="divpr">
+                    <button id="pr{{ prod.id }}" class="btn btn-primary cart">Add to cart</button>
+                </div>
+
+                <!-- Hidden product name and price for JavaScript -->
+                <span id="namepr{{ prod.id }}" style="display:none;">{{ prod.product_name }}</span>
+                <span id="pricepr{{ prod.id }}" style="display:none;">{{ prod.price }}</span>
+
+
+
+
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3 class="mb-3">{{prod.product_name}}</h3>
+            <h5 class="mb-3">{{prod.subcategory}}</h5>
+            <p class="mb-3">{{prod.desc}}</p>
+            <p><b>Price:₹ {{prod.price}}</b></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
