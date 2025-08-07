@@ -1,10 +1,10 @@
-# 🛒 Django Shopping Cart (Dockerized)
+#  Django Shopping Cart (Dockerized)
 
 This is a Django-based shopping cart application, configured for local development using Docker and PostgreSQL.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 ```bash
